@@ -7,6 +7,8 @@ class Config:
     '''
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://ian:diamonds@localhost/P'
     UPLOADED_PHOTOS_DEST = 'app/static'
+    SECRET_KEY = '69df8b1b7481455e9e27bb627a473aaf'
+   
     # email configurations
     MAIL_SERVER = 'smtp.gmail.com'
     MAIL_PORT = 587
