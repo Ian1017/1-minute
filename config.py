@@ -5,7 +5,7 @@ class Config:
     '''
     General configuration parent
     '''
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://ian:diamonds@localhost/P'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://ian:diamonds@localhost/minute'
     UPLOADED_PHOTOS_DEST = 'app/static'
     SECRET_KEY = '69df8b1b7481455e9e27bb627a473aaf'
    
@@ -32,7 +32,7 @@ class TestConfig(Config):
     Args:
         Config: The parent configuration with general configuration class
     '''
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://ian:diamonds@localhost/P'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://ian:diamonds@localhost/minute'
 
 
 class DevConfig(Config):
@@ -42,7 +42,7 @@ class DevConfig(Config):
     Args:
         Config: The parent configuration class with General Configuration Settings
     '''
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://ian:diamonds@localhost/P'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://ian:diamonds@localhost/minute'
 
 
     DEBUG = True

@@ -1,10 +1,9 @@
 from . import db
+from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash,check_password_hash
 from flask_login import UserMixin
 from . import login_manager
 from datetime import datetime
-
-
 
 
 class User(UserMixin,db.Model):
@@ -41,7 +40,7 @@ class User(UserMixin,db.Model):
 class Pitch(db.Model):
     __tablename__ = 'pitches'
 
-    id = db.Column(db.Interger,primary_key = True)
+    id = db.Column(db.Integer,primary_key = True)
     pitch_title = db.column(db.String)
     pitch_content = db.column(db.String(1000))
     category = db.Column(db.String)
@@ -94,3 +93,6 @@ class Comment(db.Model):
         def get_comments(cls,pitch):
             comments = Comment.query.filter_by(pitch_id=pitch).all()
             return comments
+
+if __name__ == '__main__':
+    manager.run()
